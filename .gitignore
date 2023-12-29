@@ -3,3 +3,4 @@ obj/
 bin/
 .vscode
 .containers
+.DS_Store/

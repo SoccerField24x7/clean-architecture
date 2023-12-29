@@ -14,7 +14,7 @@ public sealed class Apartment : Entity
         Address address,
         Money price,
         Money cleaningFee,
-        IList<Amenity> amenities)
+        List<Amenity> amenities)
         : base(id)
     {
         Name = name;
@@ -24,6 +24,9 @@ public sealed class Apartment : Entity
         CleaningFee = cleaningFee;
         Amenities = amenities;
     }
+
+    private Apartment()
+    {}
 
     public Name Name { get; private set; }
 
@@ -37,5 +40,5 @@ public sealed class Apartment : Entity
 
     public DateTime? LastBookedOnUtc { get; internal set; }
 
-    public IList<Amenity> Amenities { get; private set; } = new List<Amenity>();
+    public List<Amenity> Amenities { get; private set; } = new();
 }
